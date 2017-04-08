@@ -45,10 +45,12 @@ export default class WaveyApp extends Component {
   }
   onStop = (e) => {
     var sound = this.state.sound;
-    sound.stop(() => sound.release());
-    this.setState({
-      playing: false
-    })
+    if (sound) {
+      sound.stop(() => sound.release());
+      this.setState({
+        playing: false
+      })
+    }
   }
   render() {
     var playingLabel = "nothing is playing";
