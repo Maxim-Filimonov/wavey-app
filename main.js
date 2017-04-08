@@ -68,21 +68,21 @@ export default class WaveyApp extends Component {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
+    flexWrap: "wrap",
+    alignContent: 'center',
+    flexDirection: 'row',
     justifyContent: 'center',
     alignItems: 'center',
     backgroundColor: '#F5FCFF',
   },
-  playingLabel: {
-    fontSize: 40,
-    margin: 10,
-    color: "orange"
-  },
+
   button: {
+    width: 100,
+    height: 50,
     fontWeight: "bold",
     borderWidth: 2,
     padding: 5,
     borderRadius: 10,
-    width: 100,
     textAlign: 'center',
     margin: 4
   },
@@ -91,7 +91,13 @@ const styles = StyleSheet.create({
   },
   stopButton: {
     color: 'gray',
-  }
+  },
+  playingLabel: {
+    height: 50,
+    fontSize: 40,
+    margin: 10,
+    color: "orange"
+  },
 });
 
 AppRegistry.registerComponent('WaveyApp', () => WaveyApp);
